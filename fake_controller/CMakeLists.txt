@@ -27,6 +27,7 @@ find_package(tf2_ros REQUIRED)
 add_executable(fake_controller_node 
   src/main.cpp
   src/FakeController.cpp
+  src/constants.cpp
 )
 
 ament_target_dependencies(fake_controller_node 

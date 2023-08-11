@@ -12,6 +12,8 @@
 #include "nav_msgs/msg/odometry.hpp"
 #include "tf2_ros/transform_broadcaster.h"
 
+#include "constants.hpp" 
+
 class FakeController : public rclcpp::Node{
     private :
         // rclcpp / timer 
@@ -21,6 +23,9 @@ class FakeController : public rclcpp::Node{
         rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pub_odom_;
         bool check_;
         float lo_x_;
+
+        std::unique_ptr<Constants> constants_;
+
         /**
          * @brief 
          * 
